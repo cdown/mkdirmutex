@@ -1,0 +1,6 @@
+Since it came up a couple of times now, here's a good example of how to safely
+implement a mkdir-based mutex lock in userspace without dependencies.
+
+This is generally a lot less of a footgun than using flock(1), which has
+significant problems with (for example) FD inheritance and unintuitive
+deadlocks.
